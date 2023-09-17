@@ -19,3 +19,9 @@ func (r *UserController) Show(ctx http.Context) http.Response {
 		"Hello": "Goravel",
 	})
 }
+
+func (r *UserController) Demo(ctx http.Context) http.Response {
+	return ctx.Response().Success().Json(http.Json{
+		"Msg": "Hello",
+	})
+}
